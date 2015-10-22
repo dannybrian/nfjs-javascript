@@ -1,8 +1,18 @@
 // scoping gotches, self, and bind()
 
+var pile = {
+    elements: ["eggshell", "orange peel", "worm"],
+    get height() {
+        return this.elements.length;
+    },
+    set height(value) {
+        console.log("Ignoring attempt to set height to", value);
+    }
+};
+
 pile.remind = function (time) {
     setTimeout(function () {
-        alert("Don't forget these " + this.elements.length + " elements!");
+        console.log("Don't forget these " + this.elements.length + " elements!");
     }, time);
 }
 

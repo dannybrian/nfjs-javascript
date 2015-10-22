@@ -1,6 +1,6 @@
-Object.create(Object.prototype);
+var newObject = Object.create(Object.prototype);
 
-Object.defineProperty(newObject, “someKey”, {
+Object.defineProperty(newObject, "someKey", {
     value: "some value",
     writable: true,
     enumerable: true,

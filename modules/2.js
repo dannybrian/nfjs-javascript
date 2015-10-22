@@ -1,5 +1,7 @@
 // a module that "exports" to a provided object (mixin)
 
+var myobj = {};
+
 (function (exports) {
     lang = "en";
     var names = {
@@ -18,7 +20,7 @@
     exports.getNumber = function (name) {
         return names[lang].indexOf(name);
     };
-})(this.weekDay = {});
+})(myobj.weekDay = {});
 
-console.log(weekDay.getDay(weekDay.getNumber("Saturday")));
+console.log(myobj.weekDay.getDay(myobj.weekDay.getNumber("Saturday")));
 // → Saturday

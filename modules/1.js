@@ -43,5 +43,5 @@ var dayNames = function () {
     }
 }();
 
-console.log(dayNames(3));
+console.log(dayNames.getDay(3));
 // → Wednesday
